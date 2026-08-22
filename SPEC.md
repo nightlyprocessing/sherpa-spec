@@ -44,3 +44,14 @@ related_links:
 7. `## 6. Related Links & Dependencies`
 8. `## 7. Verification & Audit Evidence`
 9. `## 8. Revision History`
+
+
+## Shareable Filename Convention
+
+The canonical kit entrypoint is `SHERPA.md`. A handoff meant to be sent directly uses:
+
+```text
+<BriefDescription>.sherpa.md
+```
+
+The brief description states the outcome before the file is opened. Collect these files under `handoffs/` when producing a bundle.

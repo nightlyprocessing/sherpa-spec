@@ -113,6 +113,15 @@ related_links:
 
 ---
 
+
+### Canonical and Shareable Filenames
+
+- The canonical entrypoint inside every kit remains `SHERPA.md`.
+- A handoff intended to be sent directly MUST use `<BriefDescription>.sherpa.md`.
+- `<BriefDescription>` should state the outcome before the file is opened, preserve useful acronyms, and omit dates, versions, and workflow jargon.
+- Directly shareable files should be collected under a `handoffs/` directory so they can be bundled without unrelated kit internals.
+- Examples: `BOMbilling.sherpa.md`, `ComputerGithubSetup.sherpa.md`, and `TokenPiggyBank.sherpa.md`.
+
 ## 3. Sources & Provenance
 
 SherpaMD documents MUST clearly distinguish between **synthesized knowledge** and **raw source evidence**:
