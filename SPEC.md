@@ -1,6 +1,6 @@
-# SHERPA.md Format Quick Reference (v0.1.0)
+# SherpaMD Format Quick Reference (v0.1.0)
 
-For the full normative specification, see [`SHERPA.md`](./SHERPA.md).
+For the full normative specification, see [`SherpaMDSpecification.sherpa.md`](./SherpaMDSpecification.sherpa.md).
 
 ## Front Matter Schema Reference
 
@@ -48,10 +48,12 @@ related_links:
 
 ## Shareable Filename Convention
 
-The canonical kit entrypoint is `SHERPA.md`. A handoff meant to be sent directly uses:
+Every canonical kit entrypoint and shareable handoff uses:
 
 ```text
 <BriefDescription>.sherpa.md
 ```
 
 The brief description states the outcome before the file is opened. Collect these files under `handoffs/` when producing a bundle.
+
+Generic `SHERPA.md` filenames are not compliant.

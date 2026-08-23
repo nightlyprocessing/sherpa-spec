@@ -19,7 +19,7 @@ We welcome contributions in the following areas:
 2. **Adhere to Schema Norms**: Any updates to front matter schemas must maintain backward compatibility or follow SemVer conventions.
 3. **Run Validators**: Verify that all documentation and reference files pass the validator:
    ```bash
-   python3 scripts/validate_sherpa.py SHERPA.md
+   python3 scripts/validate_sherpa.py SherpaMDSpecification.sherpa.md
    ```
 4. **Security & Sanitization**: Ensure changes contain:
    - Zero hardcoded credentials, live API tokens, or session secrets.

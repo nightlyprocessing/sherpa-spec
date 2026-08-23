@@ -24,12 +24,12 @@ SherpaMD solves the problem of multi-agent **context rot**, unstructured chat lo
 ## Dual Human + AI Usage Guide
 
 ### For Human Engineers
-- **Instant Domain Orientation**: Read `SHERPA.md` at the root of any domain kit for an executive briefing, system architecture, and operational procedures.
+- **Instant Domain Orientation**: Read the descriptively named `*.sherpa.md` entrypoint at the root of any domain kit for an executive briefing, system architecture, and operational procedures.
 - **Auditable History**: Check `provenance` and `verification_state` before executing operational runbooks.
 - **Fast Troubleshooting**: Look up `## Contradiction Notes & Reconciliations` to understand recent breaking changes and reconciled configurations.
 
 ### For Autonomous AI Agents
-- **Context Loading**: Inject `SHERPA.md` directly into prompt context as the authoritative ground truth for the domain.
+- **Context Loading**: Inject the kit's descriptive `*.sherpa.md` file directly into prompt context as the authoritative ground truth for the domain.
 - **Continuous Knowledge Synthesis**: When completing tasks, update existing knowledge sections in-place rather than appending uncurated logs (see [`LLM_WIKI_GUIDELINES.md`](./LLM_WIKI_GUIDELINES.md)).
 - **Verification Proof**: Run attached verification commands and update `last_verified` timestamps and `verification_state`.
 
@@ -37,7 +37,7 @@ SherpaMD solves the problem of multi-agent **context rot**, unstructured chat lo
 
 ## Repository Contents
 
-- [`SHERPA.md`](./SHERPA.md): The normative **SherpaMD Format Specification v0.1.0** covering purpose, YAML front matter, sources/provenance, verification states, related links, contradiction notes, editing rules, and versioning.
+- [`SherpaMDSpecification.sherpa.md`](./SherpaMDSpecification.sherpa.md): The normative **SherpaMD Format Specification v0.1.0** covering purpose, YAML front matter, sources/provenance, verification states, related links, contradiction notes, editing rules, and versioning.
 - [`SPEC.md`](./SPEC.md): Summary reference and YAML schema quick-reference.
 - [`CASE_FILE_SPEC.md`](./CASE_FILE_SPEC.md): Standardized schema and workflow for research case files and kit hypotheses.
 - [`LLM_WIKI_GUIDELINES.md`](./LLM_WIKI_GUIDELINES.md): Practical anti-rot synthesis rules for autonomous LLM curators.
@@ -45,7 +45,7 @@ SherpaMD solves the problem of multi-agent **context rot**, unstructured chat lo
 
 ---
 
-## Quick Example: A Minimal `SHERPA.md`
+## Quick Example: A Minimal `*.sherpa.md`
 
 ```markdown
 ---
@@ -103,10 +103,10 @@ SherpaMD includes a standalone validator script to lint documents and check comp
 
 ```bash
 # Validate a single file:
-python3 scripts/validate_sherpa.py SHERPA.md
+python3 scripts/validate_sherpa.py SherpaMDSpecification.sherpa.md
 
 # Validate multiple files:
-python3 scripts/validate_sherpa.py path/to/kit/SHERPA.md
+python3 scripts/validate_sherpa.py path/to/kit/BriefDescription.sherpa.md
 ```
 
 ---

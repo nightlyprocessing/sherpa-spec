@@ -30,7 +30,7 @@ related_links:
 
 # SherpaMD Format Specification (v0.1.0)
 
-`SHERPA.md` is the canonical file format and knowledge schema for **SherpaMD** (`sherpamd.org`). It specifies how human operators and autonomous AI agents author, maintain, verify, and cross-reference structured operational knowledge.
+`<BriefDescription>.sherpa.md` is the canonical naming format and knowledge schema for **SherpaMD** (`sherpamd.org`). It specifies how human operators and autonomous AI agents author, maintain, verify, and cross-reference structured operational knowledge.
 
 ---
 
@@ -52,7 +52,7 @@ Traditional AI workflows tend to either:
 
 ## 2. YAML Front Matter Schema
 
-Every compliant `SHERPA.md` file MUST begin with a YAML front matter block enclosed between triple hyphens (`---`).
+Every compliant `*.sherpa.md` file MUST begin with a YAML front matter block enclosed between triple hyphens (`---`).
 
 ### Schema Definition (v0.1.0)
 
@@ -116,8 +116,9 @@ related_links:
 
 ### Canonical and Shareable Filenames
 
-- The canonical entrypoint inside every kit remains `SHERPA.md`.
-- A handoff intended to be sent directly MUST use `<BriefDescription>.sherpa.md`.
+- Every canonical entrypoint MUST use a descriptive `<BriefDescription>.sherpa.md` filename.
+- Generic filenames such as `SHERPA.md` are not compliant because the filename must explain the outcome before the file is opened.
+- A handoff intended to be sent directly follows the same descriptive naming rule.
 - `<BriefDescription>` should state the outcome before the file is opened, preserve useful acronyms, and omit dates, versions, and workflow jargon.
 - Directly shareable files should be collected under a `handoffs/` directory so they can be bundled without unrelated kit internals.
 - Examples: `BOMbilling.sherpa.md`, `ComputerGithubSetup.sherpa.md`, and `TokenPiggyBank.sherpa.md`.
@@ -147,7 +148,7 @@ Every claim, configuration, and procedure within a Sherpa kit MUST reflect its v
 Procedures in the Markdown body should include runnable verification snippets:
 ```bash
 # Verify:
-python3 scripts/validate_sherpa.py SHERPA.md
+python3 scripts/validate_sherpa.py SherpaMDSpecification.sherpa.md
 ```
 
 ---
@@ -156,7 +157,7 @@ python3 scripts/validate_sherpa.py SHERPA.md
 
 SherpaMD documents form an interconnected knowledge graph. Links are expressed through:
 - **Front Matter `related_links`**: Explicit relational mappings (`rel: "extends"`, `rel: "depends-on"`, `rel: "supersedes"`, `rel: "spec"`).
-- **Markdown Cross-References**: Relative links to other domain kits (e.g. `[Core Fleet](../core-fleet/SHERPA.md)` or `[Template](../../sherpa-kit-template/SHERPA.md)`).
+- **Markdown Cross-References**: Relative links to other domain kits (e.g. `[Core Fleet](../core-fleet/CoreFleet.sherpa.md)` or `[Template](../../sherpa-kit-template/StarterDomainKit.sherpa.md)`).
 - **Section Anchors**: Deep links to specific procedural headers.
 
 ---

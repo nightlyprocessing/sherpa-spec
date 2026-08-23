@@ -7,9 +7,9 @@ from validate_sherpa import validate_sherpa_file
 
 class TestSherpaValidator(unittest.TestCase):
     def test_valid_normative_spec(self):
-        spec_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "SHERPA.md"))
+        spec_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "SherpaMDSpecification.sherpa.md"))
         ok, msg = validate_sherpa_file(spec_path)
-        self.assertTrue(ok, f"Validation failed on SHERPA.md: {msg}")
+        self.assertTrue(ok, f"Validation failed on SherpaMDSpecification.sherpa.md: {msg}")
 
     def test_missing_field(self):
         import tempfile
